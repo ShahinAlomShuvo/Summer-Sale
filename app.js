@@ -22,7 +22,8 @@ function btnHandler(data) {
 }
 
 // coupon code apply
-document.getElementById("applyBtn").addEventListener("click", () => {
+
+function applyCoupon() {
   const inputValue = document.getElementById("couponInput");
 
   if (inputValue.value === "SELL200") {
@@ -36,9 +37,11 @@ document.getElementById("applyBtn").addEventListener("click", () => {
     const totalPriceToPay = total - discountAmount;
     document.getElementById("totalPriceToPay").innerText =
       totalPriceToPay.toFixed(2);
+  } else {
+    alert("Please Provide A Valid Coupon Code");
   }
   inputValue.value = "";
-});
+}
 
 // go home
 function goHome() {
