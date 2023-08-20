@@ -7,7 +7,7 @@ function btnHandler(data) {
   newElement.innerText = productName;
   document.getElementById("newElement").appendChild(newElement);
 
-  //   get product price name and push to display
+  //   get product price and push to display
   const productPrice = data.childNodes[3].childNodes[7].childNodes[1].innerText;
   total += parseFloat(productPrice);
   if (total > 0) {
